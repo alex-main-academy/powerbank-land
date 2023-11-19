@@ -1,0 +1,49 @@
+.about {
+    position: relative;
+    padding: 10rem 0 5rem 0;
+
+    background-image: linear-gradient(90deg, #031923, #031923b8), url(../img/about/bg.png);
+    background-repeat: no-repeat;
+    background-size: auto, 80rem;
+    background-position: center left;
+}
+
+.about .container {
+    position: relative;
+}
+
+.about__uptitle {
+    text-align: left;
+    top: -4rem;
+}
+
+.about__title {
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+.about__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about__item {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+}
+
+.about__image {
+    width: 30rem;
+}
+
+.about__desc {
+    font-size: 2rem;
+    line-height: 1.8;
+}

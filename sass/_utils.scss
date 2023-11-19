@@ -1,0 +1,103 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    line-height: 1.3;
+    background-color: #031923;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+        top: -15rem;
+        left: -20rem;
+        background-color: #00ffa234;
+        -webkit-filter: blur(13rem);
+        filter: blur(13rem);
+    }
+}
+
+.main__wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+        bottom: -15rem;
+        right: -20rem;
+        background-color: #00ffa234;
+        -webkit-filter: blur(13rem);
+        filter: blur(13rem);
+        z-index: 10;
+    }
+}
+
+.container {
+    max-width: 108rem;
+    margin: 0 auto;
+
+    @media screen and (max-width:1200px) {
+        max-width: 69rem;
+    }
+
+    @media screen and (max-width:767px) {
+        max-width: 32rem;
+    }
+}
+
+.main__link {
+    background-image: linear-gradient(90deg, rgb(200, 34, 34), rgb(131, 8, 8));
+    width: 30rem;
+    height: 7rem;
+    border-radius: 4rem .8rem;
+    box-shadow: 0 0 4rem .3rem rgba(200, 34, 34, 0.608);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+
+    transition-duration: 300ms;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.main__uptitle {
+    width: 100%;
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 6rem;
+    color: #5e5e5e0e;
+}
+
+.main__title {
+    position: relative;
+    z-index: 1;
+    font-family: var(--title-font);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
