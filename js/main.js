@@ -73,6 +73,7 @@ form.addEventListener("submit", (event) => {
         .then((response) => {
             loader.classList.remove("active");
             thanksModal.classList.add("is-open");
+            form.reset();
 
             setTimeout(() => {
                 thanksModal.classList.remove("is-open");
