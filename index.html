@@ -11,6 +11,7 @@
     <meta name="keywords"
         content="Powerbank, портативні зарядні пристрої, заряджайте в дорозі, енергозбереження, технології зарядки, мобільний аксесуар, онлайн-крамниця, потужність акумулятора, переносні зарядки" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -22,24 +23,29 @@
                 <nav>
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="" class="header__link">Головна</a>
+                            <a href="#home" class="header__link">Головна</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__link">Переваги</a>
+                            <a href="#feature" class="header__link">Переваги</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__link">Опис</a>
+                            <a href="#about" class="header__link">Опис</a>
                         </li>
                         <li class="header__item">
-                            <a href="" class="header__link">Замовити</a>
+                            <a href="#order" class="header__link">Замовити</a>
                         </li>
                     </ul>
+                    <button class="header__menu js-menu-open">
+                        <img src="img/menu/menu.png"
+                            alt="Купуйте надійні та потужні Powerbank у нашому інтернет-магазині!" width="25"
+                            height="25">
+                    </button>
                 </nav>
             </div>
         </header>
 
         <main class="main">
-            <section class="hero">
+            <section class="hero" id="home">
                 <div class="container">
                     <h1 class="hero__title">
                         Завжди на зв'язку: <br> Купуйте надійні <span>та потужні Powerbank</span> <br> у нашому
@@ -83,7 +89,7 @@
                 </div>
             </section>
 
-            <section class="feature">
+            <section class="feature" id="feature">
                 <div class="container">
                     <p class="feature__uptitle main__uptitle">Переваги</p>
                     <h2 class="feature__title main__title">
@@ -168,7 +174,7 @@
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <p class="main__uptitle about__uptitle">Детальний Огляд</p>
                     <h2 class="about__title main__title">Детальний Огляд</h2>
@@ -216,7 +222,7 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact" id="order">
                 <div class="container">
                     <div class="contact__text">
                         <h2 class="contact__title">
@@ -229,11 +235,12 @@
                             <span class="contact__price_new">2000 грн</span>
                         </div>
                     </div>
-                    <form class="contact__form">
+                    <form class="contact__form js-form">
                         <input type="text" name="name" minlength="3" placeholder="Введіть ваше ім'я" required
                             class="contact__input">
                         <input type="tel" name="phone" minlength="8" maxlength="15" placeholder="Введіть ваш телефон"
                             pattern="[0-9+]*" required class="contact__input">
+                        <input type="hidden" name="time" class="js-form-time">
                         <button type="submit" class="contact__submit main__link">Замовити зараз</button>
                     </form>
                 </div>
@@ -246,21 +253,57 @@
                 <nav>
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a href="" class="footer__link">Головна</a>
+                            <a href="#home" class="footer__link">Головна</a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__link">Переваги</a>
+                            <a href="#feature" class="footer__link">Переваги</a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__link">Опис</a>
+                            <a href="#about" class="footer__link">Опис</a>
                         </li>
                         <li class="footer__item">
-                            <a href="" class="footer__link">Замовити</a>
+                            <a href="#order" class="footer__link">Замовити</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </footer>
+
+        <div class="menu js-menu">
+            <div class="container">
+                <button class="menu__close js-menu-close">
+                    <img src="img/menu/close.png"
+                        alt="Завжди на зв'язку: Купуйте надійні та потужні Powerbank у нашому інтернет-магазині!"
+                        width="25" height="25">
+                </button>
+                <nav>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#home" class="menu__link">Головна</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#feature" class="menu__link">Переваги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link">Опис</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#order" class="menu__link">Замовити</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#home" class="menu__logo">POWERBANK</a>
+            </div>
+        </div>
+
+        <div class="loader js-loader">
+            <div id="lottie2-container" class="loader__container"></div>
+        </div>
+    </div>
+
+    <div class="modal js-modal">
+        <p class="modal__title">Дякуємо!</p>
+        <p class="modal__text">Ваш запит відправлено!</p>
     </div>
 
     <script defer src="js/main.js"></script>
